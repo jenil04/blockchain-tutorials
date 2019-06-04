@@ -1,0 +1,17 @@
+{
+  "executablePath": "contracts/ERC20Interface.sol",
+  "name": "ERC20Interface.sol",
+  "executable": true,
+  "hasProgress": false,
+  "mode": "sol",
+  "readOnly": true,
+  "testFixture": false,
+  "visible": true,
+  "stageContainerId": "5cf434db88aa2d93df18fb80",
+  "codeStageIds": [
+    "5cf485a288aa2d93df18fb95"
+  ],
+  "id": "5cf6d247de9e880c7d95ef8c",
+  "initialCode": "$$LOOKUP",
+  "fileLocation": null
+}

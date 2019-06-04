@@ -11,7 +11,8 @@
   "testFramework": "truffle_with_mocha",
   "codeFileIds": [
     "5cf4850488aa2d93df18fb86",
-    "5cf4850488aa2d93df18fb87"
+    "5cf4850488aa2d93df18fb87",
+    "5cf6d1b5de9e880c7d95ef84"
   ],
   "position": 1
 }
