@@ -1,4 +1,4 @@
-pragma solidity ^0.4.21;
+pragma solidity ^0.4.19;
 
 contract ERC20Token {
     string public name;
@@ -6,6 +6,11 @@ contract ERC20Token {
     uint8 public decimals = 8;  
     uint256 public totalSupply;
 
+	uint256 public A_lock; 
+    uint256 public A_spend;  
+    uint256 public M; 
+    
+    uint256 public lockingTime; 
     mapping (address => uint256) public balanceOf;
     mapping (address => mapping (address => uint256)) public allowance;
     
@@ -27,7 +32,6 @@ contract ERC20Token {
         uint prevBalance = balanceOf[_from] + balanceOf[_to];
         balanceOf[_from] = balanceOf[_from] - _value;
         balanceOf[_to] = balanceOf[_to] + _value;
-        emit Transfer(_from, _to, _value);
         assert(balanceOf[_from] + balanceOf[_to] == prevBalance);
     }
 
@@ -51,7 +55,6 @@ contract ERC20Token {
         require(balanceOf[msg.sender] >= _value); // Checking to see if the sender has balance >= value. 
         balanceOf[msg.sender] = balanceOf[msg.sender] - _value; // Burning the tokens.
         totalSupply = totalSupply - _value;
-        emit Burn(msg.sender, _value);
         return true;
     }
 
@@ -61,8 +64,22 @@ contract ERC20Token {
         balanceOf[_from] = balanceOf[_from] - _value; // Burning the tokens
         allowance[_from][msg.sender] = allowance[_from][msg.sender] - _value; // Burning allowance
         totalSupply = totalSupply - _value;                              
-        emit Burn(_from, _value);
         return true;
+    }
+
+
+    function lock(address _recipient, address _pool) public {
+        balanceOf[_recipient] = balanceOf[_recipient] - (A_lock); 
+        balanceOf[_pool] = balanceOf[_pool] + (A_lock); 
+        uint256 reward = (M * (A_lock)) + (A_spend); 
+        balanceOf[_recipient] = balanceOf[_recipient] + (reward); 
+    }
+    
+
+    function unlock(address _recipient, address _pool) public {
+        require(lockingTime >= 90);
+        balanceOf[_recipient] = balanceOf[_recipient]- A_lock; 
+        balanceOf[_pool] = balanceOf[_pool] - A_lock; 
     }
 }
 
