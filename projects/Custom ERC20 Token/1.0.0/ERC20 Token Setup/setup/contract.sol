@@ -1,4 +1,4 @@
-pragma solidity ^0.4.21;
+pragma solidity ^0.4.19;
 
 contract ERC20Token {
     uint8 public decimals = 8;  

@@ -1,0 +1,12 @@
+{
+  "title": "Introduction to Solidty",
+  "id": "5cf94de7df23af23549aa575",
+  "containerType": "Lesson",
+  "description": "A basic approach to learning Solidity and creating your first dApp.",
+  "thumbnailUrl": null,
+  "productionReady": null,
+  "estimatedTime": 120,
+  "badgeTypeIds": [
+    "5cf94f4fdf23af23549aa577"
+  ]
+}

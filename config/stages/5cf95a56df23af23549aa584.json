@@ -1,0 +1,17 @@
+{
+  "containerId": "5cf94de7df23af23549aa576",
+  "title": "Solidity -- Modifiers, Error Handling, & Storage",
+  "abiValidations": "$$LOOKUP",
+  "task": "$$LOOKUP",
+  "details": "$$LOOKUP",
+  "id": "5cf95a56df23af23549aa584",
+  "type": "CodeStage",
+  "language": "solidity",
+  "languageVersion": "0.4.19",
+  "testFramework": "truffle_with_mocha",
+  "codeFileIds": [
+    "5cf95a56df23af23549aa585",
+    "5cf95a56df23af23549aa586"
+  ],
+  "position": 3
+}

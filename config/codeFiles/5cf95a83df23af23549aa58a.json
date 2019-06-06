@@ -1,0 +1,15 @@
+{
+  "executablePath": "test/testEther.js",
+  "name": "testEther.js",
+  "testFixture": true,
+  "stageContainerId": "5cf94de7df23af23549aa576",
+  "codeStageIds": [
+    "5cf95a83df23af23549aa588"
+  ],
+  "id": "5cf95a83df23af23549aa58a",
+  "initialCode": "$$LOOKUP",
+  "visible": true,
+  "readOnly": true,
+  "executable": true,
+  "mode": "javascript"
+}
